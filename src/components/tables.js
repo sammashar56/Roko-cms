@@ -99,6 +99,7 @@ import {loadToken} from '../_services/user_services'
         </thead>
         <tbody class="bg-gray-200">
         {this.state.thrifters.map(thrifter => (
+          
           <tr class="bg-white border-4 border-gray-200">
             <td class="px-16 py-2 flex flex-row items-center">
               <img
@@ -122,7 +123,7 @@ import {loadToken} from '../_services/user_services'
               <span class="text-center ml-2 font-bold">{thrifter.level}</span>
             </td>
             <td class="px-16 py-2">
-              <span>{moment(thrifter.createdAt).fromNow()}</span>
+              <span>{moment(thrifter.createdAt).startOf('minute').fromNow()}</span>
             </td>
             <td class="px-16 py-2">
               <span>{thrifter.category}</span>
