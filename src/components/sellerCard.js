@@ -5,7 +5,7 @@ import Nav from './nav'
 import moment from 'moment'
 import {NotificationManager} from 'react-notifications';
 import {loadToken} from '../_services/user_services'
-import History from './History'
+// import History from './History'
 
 class Sellercard extends React.Component {
   

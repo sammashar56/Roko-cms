@@ -53,7 +53,7 @@ import {loadToken} from '../_services/user_services'
       
   }
   render() {    
-    const isBrandfocused = this.state.thrifters.isBrandfocused
+    // const isBrandfocused = this.state.thrifters.isBrandfocused
     return (
         <div>
           <Nav/>

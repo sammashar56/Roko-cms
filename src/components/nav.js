@@ -38,7 +38,7 @@ class Nav extends React.Component {
             <a href="/add" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Add new customer</a>
           </div>
           <div>
-            <a href="" className=" text-sm px-4 py-2 leading-none border rounded hover:text-red-700 font-extrabold hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 " onClick={(e) => this.handleSubmit(e)} >Log out</a>
+            <button className="text-sm px-4 py-2 leading-none border rounded hover:text-red-700 font-extrabold hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 " onClick={(e) => this.handleSubmit(e)} >Log out</button>
           </div>
         </div>
       </nav>
