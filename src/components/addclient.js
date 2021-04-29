@@ -95,6 +95,7 @@ class Addclient extends React.Component{
               <option>Men's offical</option>
               <option>Jewellry </option>
               <option>bags</option>
+              <option>men's casual</option>
               <option>eye wear</option>
               <option>creative</option>
               <option>Ankara</option>
