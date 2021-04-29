@@ -27,7 +27,7 @@ class Nav extends React.Component {
             <a href="/sellers" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
               List
       </a>
-            <a href="/seller" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-6">
+            <a href="/sellers" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-6">
               Interested
       </a>
             <a href="/sellers" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
