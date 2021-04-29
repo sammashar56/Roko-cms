@@ -122,7 +122,7 @@ import {loadToken} from '../_services/user_services'
               <span class="text-center ml-2 font-bold">{thrifter.level}</span>
             </td>
             <td class="px-16 py-2">
-              <span>{ moment(thrifter.createdAt).format('ll')}</span>
+              <span>{moment(thrifter.createdAt).fromNow()}</span>
             </td>
             <td class="px-16 py-2">
               <span>{thrifter.category}</span>
