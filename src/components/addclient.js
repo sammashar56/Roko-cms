@@ -42,8 +42,8 @@ class Addclient extends React.Component{
           price_range: this.state.price_range,
           level: this.state.level
         }
-      // const {REACT_APP_URL} = process.env;
-      const url = "http://localhost:3500"
+      const {REACT_APP_URL} = process.env;
+      const url = REACT_APP_URL
       const token = loadToken()
       const options = {
         headers: {
