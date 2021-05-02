@@ -42,8 +42,8 @@ class Addclient extends React.Component{
           price_range: this.state.price_range,
           level: this.state.level
         }
-      const {REACT_APP_URL} = process.env;
-      const url = REACT_APP_URL 
+      // const {REACT_APP_URL} = process.env;
+      const url = "http://localhost:3500"
       const token = loadToken()
       const options = {
         headers: {
@@ -58,18 +58,32 @@ class Addclient extends React.Component{
           NotificationManager.success(res.data.message, 'Successfully', 1000);
           console.log("RESPONSE ==== : ", res);
           
-        }).catch(function (error) {
-
-          if (error.response) {
-            // (error.response.data);
-            NotificationManager.info('seller already exists', '', 2000)
-          } else if (error.request) {
+        })
+        .catch((err) => {
+          console.log(err.message)
+          if (
+            err.message ===
+            "seller already exists"
+          ) {
+            NotificationManager.error("You used Google to sign in");
           } else {
-            // Something happened in setting up the request that triggered an Error
-            console.log('Error', error.message);
+            NotificationManager.error("There was a problem giving you access");
+            console.log(err.message)
           }
-          console.log(error.config);
         });
+        // .catch(function (error) {
+
+        //   console.log(error.response.message)
+        //   if (error.response) {
+        //     console.log(error.message)
+        //     NotificationManager.info('seller already exists', '', 2000)
+        //   } else if (error.request) {
+        //   } else {
+        //     // Something happened in setting up the request that triggered an Error
+        //     console.log('Error', error.message);
+        //   }
+        //   console.log('');
+        // });
   }
   render() {
     return (
@@ -107,6 +121,7 @@ class Addclient extends React.Component{
               <option>eye wear</option>
               <option>creative</option>
               <option>Ankara</option>
+              <option>Micro-influencer</option>
               <option>Local artisan accessories.</option>
             </select>
          </li>
