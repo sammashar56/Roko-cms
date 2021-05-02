@@ -58,10 +58,18 @@ class Addclient extends React.Component{
           NotificationManager.success(res.data.message, 'Successfully', 1000);
           console.log("RESPONSE ==== : ", res);
           
-        })
-        .catch((error) => {
-          console.log("ERROR: ====", error);
-        })
+        }).catch(function (error) {
+
+          if (error.response) {
+            // (error.response.data);
+            NotificationManager.info('seller already exists', '', 2000)
+          } else if (error.request) {
+          } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log('Error', error.message);
+          }
+          console.log(error.config);
+        });
   }
   render() {
     return (
