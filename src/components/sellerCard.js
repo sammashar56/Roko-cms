@@ -15,9 +15,9 @@ class Sellercard extends React.Component {
   }
     
   fetchSeller() {
-    // const {seller_id} = useParams()
     const token = loadToken()
-    const url = 'http://localhost:3500'
+    const {REACT_APP_URL} = process.env;
+    const url = REACT_APP_URL
     const options = {
       headers: {
         'Authorization': token
